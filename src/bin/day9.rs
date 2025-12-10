@@ -104,13 +104,11 @@ fn has_intersection(xs: &[Vec2i], p: Vec2i, q: Vec2i) -> bool {
     let max_x = p.0.max(q.0);
     let min_y = p.1.min(q.1);
     let max_y = p.1.max(q.1);
-    let ys = vec![
-        (min_x, min_y),
+    let ys = [(min_x, min_y),
         (max_x, min_y),
         (max_x, max_y),
         (min_x, max_y),
-        (min_x, min_y),
-    ];
+        (min_x, min_y)];
 
     for i in 0..xs.len() - 1 {
         let p0 = xs[i];
